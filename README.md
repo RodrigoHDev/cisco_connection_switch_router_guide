@@ -138,16 +138,25 @@ The following section corresponds to the global configuration for any network de
   logging synchronous
   ```
 
-*General Console Configuration in Port 0*
+*General Console Configuration in Port 0 - Access through accounts*
 
 ```
 line console 0
-  [password <password> | secret <password>]
-  login local [login]
+  login local
   exec-timeout <minutes>
   logging synchronous
+```
+
+*General Console Configuration - Access only in Console by password*
 
 ```
+line console 0
+  password <password> | secret <password>
+  login
+  exec-timeout <minutes>
+  logging synchronous
+```
+
 <br>
 
 ## 14. Virtual Console Configuration for Remote Access
