@@ -204,7 +204,7 @@ line console 0
   logging synchronous
   ```
 
-*General Remote Console Access for 3 Connections*
+*General Remote Console Access for 3 Connections by SSH*
 
 ```
 line vty 0 2
@@ -213,6 +213,17 @@ line vty 0 2
   login local
   logging synchronouss
 ```
+
+*General Remote Console Access for 3 Connections by Telnet*
+
+```
+line vty 0 2
+  exec-timeout 2
+  transport input ssh
+  login local
+  logging synchronouss
+```
+
 ---
 <br>
 
